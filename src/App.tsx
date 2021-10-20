@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import styles from './App.module.scss';
+import { LoginBox } from './components/LoginBox';
+import { MessageList } from './components/MessageList';
+
+export function App() {
 
   return (
-    <h1>Hello World</h1>
+    <main className={styles.contentWrapper}>
+      <MessageList />
+      <LoginBox />
+    </main>
   )
 }
-
-export default App
